@@ -7,19 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Кальулятор времени"
-        android:textColor="@color/color1"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/toolbarColor"
 
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/lineOperand1"
@@ -29,7 +25,7 @@
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain">
 
         <EditText
             android:id="@+id/h1"
@@ -139,6 +135,7 @@
           android:layout_marginRight="4pt"
           android:text="+"
           android:textSize="24dp"
+          android:backgroundTint="@color/buttonColor"
           />
       <Button
           android:id="@+id/buttonDif"
@@ -150,6 +147,7 @@
           android:layout_marginRight="8pt"
           android:text="-"
           android:textSize="24dp"
+          android:backgroundTint="@color/buttonColor"
           />
     </LinearLayout>
 
@@ -157,13 +155,12 @@
         android:id="@+id/textResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="Результат"
+        android:layout_marginTop="59dp"
         android:gravity="center"
-        android:textSize="30dp"
-        app:layout_constraintTop_toTopOf="@id/lineOperand2"
+        android:text="Результат"
 
-        />
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/lineOperand2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
